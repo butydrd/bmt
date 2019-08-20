@@ -1,0 +1,23 @@
+{
+  "name": "blog-manager-tool",
+  "version": "1.0.0",
+  "description": "博客管理工具",
+  "main": "src/index.js",
+  "author": "natural-spirit",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "meant": "^1.0.1",
+    "moment": "^2.24.0",
+    "progress": "^2.0.3",
+    "prompts": "^2.2.1",
+    "yargs": "^13.2.4",
+    "yurnalist": "^1.0.5"
+  },
+  "bin": {
+    "bmt": "./src/index.js"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0"
+  }
+}
