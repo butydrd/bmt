@@ -235,10 +235,12 @@ function getCategories(dir, ignore = []) {
                 }
                 const spinner = report.activity();
                 exec('yarn run develop', {
-                    cwd: config.dir,
-                    stdio: ['pipe', 'pipe', 'pipe'],
+                    cwd: config.dir
                 }).then(() => {
                     log('已结束预览')
+                }).catch((e) => {
+                    log.error(e.message);
+                    process.exit()
                 });
                 let i = 0, timer = null;
                 spinner.tick(`编译中，耗时: 0s`);
@@ -250,7 +252,7 @@ function getCategories(dir, ignore = []) {
                     try {
                         if (await checkTcpPort(8000)) {
                             spinner.end();
-                            log('编译完毕，运行中\n');
+                            log(`编译完毕 耗时：${i}s，运行中\n`);
                             log('http://localhost:8000');
                             clearInterval(timer);
                             return void 0
