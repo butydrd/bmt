@@ -7,4 +7,4 @@
 npm i -g
 ```
 
-需搭配[Gatsby主题BaiJX使用](https://github.com/mostearly/baijx)
+需搭配[Gatsby主题BaiJX使用](https://github.com/butydrd/baijx)
