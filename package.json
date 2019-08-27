@@ -1,23 +1,27 @@
 {
-  "name": "blog-manager-tool",
-  "version": "1.0.0",
+  "name": "@butydrd/bmt",
+  "version": "1.1.0",
   "description": "博客管理工具",
-  "main": "src/index.js",
-  "author": "natural-spirit",
+  "main": "./src/main.js",
+  "author": "soulflare",
   "license": "MIT",
+  "bin": {
+    "bmt": "./src/main.js"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
-    "meant": "^1.0.1",
+    "cross-spawn": "^6.0.5",
     "moment": "^2.24.0",
-    "progress": "^2.0.3",
     "prompts": "^2.2.1",
     "yargs": "^13.2.4",
     "yurnalist": "^1.0.5"
   },
-  "bin": {
-    "bmt": "./src/index.js"
-  },
   "devDependencies": {
-    "@types/chalk": "^2.2.0"
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "singleQuote": true
   }
 }
